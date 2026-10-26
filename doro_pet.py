@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-回收小怪兽 —— 删除/还原文件时的趣味桌面动画
+Doro咕嘎桌宠 —— 删除/还原文件时的趣味桌面动画
 
 - 删除文件到回收站：文件立刻照常进入回收站，同时小怪兽从屏幕左侧
   噔噔噔跑来把文件咔嚓吃掉，再抱着残渣丢进右下角的回收站。
@@ -11,8 +11,8 @@
 仅依赖 Python 标准库（Windows + tkinter）。
 
 用法:
-    FileMonster.exe              常驻运行（开机自启）
-    FileMonster.exe --test       播放一次演示动画（删除 + 还原）
+    doro_pet.exe                 常驻运行（开机自启）
+    doro_pet.exe --test          播放一次演示动画（删除 + 还原）
 """
 
 import configparser
@@ -198,7 +198,7 @@ def autostart_enabled():
     try:
         with winreg.OpenKey(winreg.HKEY_CURRENT_USER,
                             r'Software\Microsoft\Windows\CurrentVersion\Run') as k:
-            return bool(winreg.QueryValueEx(k, 'FileMonster')[0])
+            return bool(winreg.QueryValueEx(k, 'DoroPet')[0])
     except OSError:
         return False
 
@@ -210,18 +210,18 @@ def set_autostart(on):
         if getattr(sys, 'frozen', False):
             target = sys.executable
         else:
-            target = r'D:\FileMonster\FileMonster.exe'
+            target = sys.executable
             if not os.path.isfile(target):
                 return autostart_enabled()
         try:
             with winreg.OpenKey(winreg.HKEY_CURRENT_USER, path, 0, winreg.KEY_SET_VALUE) as k:
-                winreg.SetValueEx(k, 'FileMonster', 0, winreg.REG_SZ, f'"{target}"')
+                winreg.SetValueEx(k, 'DoroPet', 0, winreg.REG_SZ, f'"{target}"')
         except OSError:
             pass
     else:
         try:
             with winreg.OpenKey(winreg.HKEY_CURRENT_USER, path, 0, winreg.KEY_SET_VALUE) as k:
-                winreg.DeleteValue(k, 'FileMonster')
+                winreg.DeleteValue(k, 'DoroPet')
         except OSError:
             pass
     return autostart_enabled()
@@ -242,7 +242,7 @@ def start_tray(cmd_q):
                 return _cb
 
             menu = Menu(
-                Item(lambda item: ('回收小怪兽 · ' + ('咕嘎' if CFG['pet'] == 'guga' else 'Doro')
+                Item(lambda item: ('Doro咕嘎 · ' + ('咕嘎' if CFG['pet'] == 'guga' else 'Doro')
                                    + ' · 运行中'), None, enabled=False),
                 Menu.SEPARATOR,
                 Item('播放演示动画', send('demo'), default=True),
@@ -261,7 +261,7 @@ def start_tray(cmd_q):
                 Menu.SEPARATOR,
                 Item('退出', send('quit')),
             )
-            icon = pystray.Icon('FileMonster', img, '回收小怪兽 (Doro & Guga)', menu)
+            icon = pystray.Icon('DoroPet', img, 'Doro咕嘎桌宠', menu)
             _TRAY['icon'] = icon
             icon.run_detached()
         except Exception:
@@ -272,7 +272,7 @@ def start_tray(cmd_q):
 VOICE_WORDS = ['你好', '朵萝', '多罗', '哆啦', '朵朵', '咕嘎', '咕咕', '嘎嘎', '咕卡',
                '卖个萌', '卖萌', '睡觉', '换角色', '切换角色', '换一个',
                '躲起来', '消失', '别烦我']
-VOICE_FILE = os.path.join(tempfile.gettempdir(), 'file_monster_voice.txt')
+VOICE_FILE = os.path.join(tempfile.gettempdir(), 'doro_pet_voice.txt')
 VOICE_Q = queue.Queue()
 _VOICE_PROC = [None]
 
@@ -416,7 +416,7 @@ def acquire_single_instance():
     global _MUTEX
     try:
         kernel32 = ctypes.windll.kernel32
-        _MUTEX = kernel32.CreateMutexW(None, False, 'FileMonster_Single_Instance')
+        _MUTEX = kernel32.CreateMutexW(None, False, 'DoroPet_Single_Instance')
         return kernel32.GetLastError() != 183
     except Exception:
         return True
@@ -597,7 +597,7 @@ def watcher(q):
 
 
 SR = 22050
-SFX_DIR = os.path.join(tempfile.gettempdir(), 'file_monster_sfx')
+SFX_DIR = os.path.join(tempfile.gettempdir(), 'doro_pet_sfx')
 
 
 def _tone(dur, f0, f1, vol, kind='sine', decay=None, vib=0.0, vib_rate=26.0):
@@ -2779,7 +2779,7 @@ def main():
         pass
     load_config()
     log_trim()
-    log('=== FileMonster started ===')
+    log('=== DoroPet started ===')
     ensure_sfx()
     ov = Overlay()
     build_sprites()
@@ -2986,7 +2986,7 @@ def main():
         if CFG['voice']:
             log('voice mode: push-to-talk (T key)')
         print('=' * 46)
-        print(' 回收小怪兽已就位！')
+        print(' Doro咕嘎桌宠已就位！')
         print(' 现在把一个文件删除到回收站试试～')
         print(' 还原/清空回收站也有动画哦')
         print('=' * 46)
