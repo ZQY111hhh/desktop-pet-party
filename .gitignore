@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Runtime files
+log.txt
+config.ini
+*.wav
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temp
+*.tmp
+
+# Binary (build from source or download Release)
+FileMonster.exe
+_internal/
+*.bat
