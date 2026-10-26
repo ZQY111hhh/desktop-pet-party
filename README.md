@@ -36,11 +36,11 @@
 
 ## 快速开始
 
-### 方式一：直接运行（推荐）
+### 方式一：下载可执行文件（推荐）
 
-1. 下载 Release 中的 `FileMonster.zip`
-2. 解压到任意目录
-3. 双击 `FileMonster.exe`
+> **点击右侧 [Releases](https://github.com/ZQY111hhh/doro-guga-desktop-pet/releases) → 下载 `DoroPet_v1.0.zip` → 解压 → 双击 exe 即可运行**
+
+> 注意：不要点绿色的 "Code" 按钮下载，那只有源代码没有可执行文件
 
 > 需要 Windows 10+，语音功能需安装中文语言包
 
