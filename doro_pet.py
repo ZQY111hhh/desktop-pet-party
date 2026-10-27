@@ -351,6 +351,10 @@ def start_tray(cmd_q):
             def send(c):
                 def _cb():
                     cmd_q.put(c)
+                    try:
+                        _TRAY['icon'].update_menu()
+                    except Exception:
+                        pass
                 return _cb
 
             menu = Menu(
@@ -503,6 +507,14 @@ def speak_async(text):
         pass
 
 
+def _refresh_menu():
+    try:
+        if _TRAY.get('icon'):
+            _TRAY['icon'].update_menu()
+    except Exception:
+        pass
+
+
 def switch_pet(kind, show):
     if show.animating and show._job_kind in ('del', 'restore', 'empty'):
         return
@@ -514,6 +526,7 @@ def switch_pet(kind, show):
     try:
         if _TRAY.get('icon'):
             _TRAY['icon'].icon = make_tray_image()
+            _TRAY['icon'].update_menu()
     except Exception:
         pass
     name = PET_INFO.get(kind, {}).get('name', kind)
@@ -2972,6 +2985,7 @@ def main():
                     elif c == 'voice':
                         CFG['voice'] = not CFG['voice']
                         save_config()
+                        _refresh_menu()
                         if show.idling:
                             show._bubble('按T说话已开启~' if CFG['voice'] else '语音已关闭', 2.0)
                     elif c == 'voicetest':
@@ -2996,8 +3010,10 @@ def main():
                     elif c == 'sound':
                         CFG['sound'] = not CFG['sound']
                         save_config()
+                        _refresh_menu()
                     elif c == 'autostart':
                         set_autostart(not autostart_enabled())
+                        _refresh_menu()
             except queue.Empty:
                 pass
             if do_quit:
