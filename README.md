@@ -1,6 +1,6 @@
-# Doro Guga Desktop Pet | Doro咕嘎桌宠
+# 桌宠派对 Desktop Pet Party 🐹🐻🐋
 
-一只住在屏幕右下角的桌面宠物。删除文件时跑来吃掉，还原时搬回来，平时打盹、爬墙、等你投喂。支持 4 个角色切换，每个角色有专属台词和行为风格。
+一群住在屏幕右下角的桌面小宠物。删除文件时跑来吃掉，还原时搬回来，平时打盹、爬墙、等你投喂。4 个角色各有专属台词和性格——Doro 软萌、咕嘎活泼、DeepSeek酱 一嘴AI梗、玩笑熊满脑子汉堡。
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6)
