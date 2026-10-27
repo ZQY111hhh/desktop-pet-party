@@ -358,13 +358,9 @@ def start_tray(cmd_q):
                 return _cb
 
             menu = Menu(
-                Item(lambda item: ('Doro咕嘎 · ' + ('咕嘎' if CFG['pet'] == 'guga' else 'Doro')
-                                   + ' · 运行中'), None, enabled=False),
+                Item(lambda item: ('桌宠派对 · ' + pet_name()), None, enabled=False),
                 Menu.SEPARATOR,
                 Item('播放演示动画', send('demo'), default=True),
-                Item('喂个橙子', send('feed')),
-                Item('表演爬窗', send('winwalk')),
-                Item('去爬墙', send('goclimb')),
                 Item('显示/隐藏宠物', send('boss')),
                 Item('角色', Menu(
                     Item('Doro', send('pet_doro'), checked=lambda item: CFG['pet'] == 'doro'),
@@ -372,14 +368,14 @@ def start_tray(cmd_q):
                     Item('DeepSeek酱', send('pet_deepseek'), checked=lambda item: CFG['pet'] == 'deepseek'),
                     Item('玩笑熊', send('pet_jokebear'), checked=lambda item: CFG['pet'] == 'jokebear'),
                 )),
+                Menu.SEPARATOR,
                 Item('音效', send('sound'), checked=lambda item: CFG['sound']),
                 Item('语音唤醒', send('voice'), checked=lambda item: CFG['voice']),
-                Item('语音自检', send('voicetest')),
                 Item('开机自启', send('autostart'), checked=lambda item: autostart_enabled()),
                 Menu.SEPARATOR,
                 Item('退出', send('quit')),
             )
-            icon = pystray.Icon('DoroPet', img, 'Doro咕嘎桌宠', menu)
+            icon = pystray.Icon('DoroPet', img, '桌宠派对', menu)
             _TRAY['icon'] = icon
             icon.run_detached()
         except Exception:
