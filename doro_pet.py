@@ -81,6 +81,117 @@ PHRASES = {
     'peek': ('偷偷看你~', '嘘…躲猫猫', '被发现了！', '就露出一点点…', 'zzz…嗯？'),
 }
 
+PET_INFO = {
+    'doro': {
+        'name': 'Doro',
+        'voice_words': ['朵萝', '多罗', '哆啦', '朵朵'],
+        'phrases': {
+            **PHRASES,
+            'greet': ('到！', '叫我干嘛~', '我在呢！', '有什么吩咐？', '嗨~', '来啦来啦！'),
+            'hover': ('摸摸头~', '嘿嘿，好舒服~', '再摸久一点嘛！', '咕噜咕噜…', '你的手好暖呀', '最喜欢被摸了', '继续继续~', '好幸福~'),
+            'hit': ('呜…疼疼', '干嘛打我！', '轻点轻点！', '好痛 QAQ', '坏蛋！', '不许打了！'),
+            'pout': ('哼，再打就要哭给你看了', '记仇了哦！不理你了！', '本仓鼠生气了！超气！', '哼哼哼！气鼓鼓', '道歉！快道歉！'),
+            'sleep': ('呼…呼…', 'zZZ…', '守护回收站ing…', '唔…好困…', '梦里全是好吃的…', '别乱删文件哦~', '回收站我来守！', '睡美容觉中…'),
+            'hungry': ('肚子咕咕叫了…', '好饿呀…', '橙子…想吃橙子…', '投喂我嘛~', '饿到走不动了…'),
+            'del_done': ('吃饱啦~', '嗝~ 好满足', '文件真香~', '又光盘一单！', '谢谢款待~', '好吃！下次还来！'),
+            'restore_done': ('物归原主~', '完璧归赵！', '东西还你啦~', '快夸我！', '从垃圾桶抢救成功！'),
+            'climb_up': ('冲鸭！向上爬！', '马上到顶了！', '上面会有什么呢…', '小短腿要抽筋啦', '哼哧…哼哧…', '高处的空气真好~', '这面墙怎么这么高…'),
+            'climb_dn': ('慢慢下…别摔…', '下楼模式启动~', '下面好像有好吃的？', '一步一步往下挪…', '快到底啦！', '脚底有点打滑…', '倒挂金钩！'),
+            'ceil': ('倒挂观光中~', '天花板真干净！', '谁在下面看我？', '蜘蛛侠模式！', '从上面看世界不一样~', '咚咚咚…有人吗'),
+            'cling': ('挂在边上真舒服~', '这里视野不错！', '像爬树一样~', '我有牢牢抓住哦', '壁虎模式启动！'),
+            'drag': ('放…放开我！', '别揪我耳朵！', '要去哪里呀？', '救命，被拎起来啦！', '我会飞的嘛？'),
+            'drop': ('就睡这儿啦~', '这里风水不错~', '挪窝成功！', '嗯，就这儿吧', '新窝舒服！'),
+            'dizzy': ('头好晕…', '下次温柔点…', '我的腿好软…', '世界在转圈圈…'),
+            'throw': ('呀啊啊——！', '飞起来了！', '救命呀！'),
+            'morning': ('早上好呀！', '新的一天，冲鸭！', '伸个懒腰~哈~'),
+            'night_wake': ('干嘛吵我睡觉…', '深夜了哦…', '让人家睡嘛…'),
+        },
+    },
+    'guga': {
+        'name': '咕嘎',
+        'voice_words': ['咕嘎', '咕咕', '嘎嘎', '咕卡'],
+        'phrases': {
+            **PHRASES,
+            'greet': ('咕嘎！', '咕嘎咕嘎~', '来啦来啦！', '咕嘎？', '我在呢咕嘎！'),
+            'hover': ('咕嘎~摸摸~', '咕嘎咕嘎…好舒服', '再摸咕嘎一下！', '咕嘎最喜欢你了'),
+            'hit': ('咕嘎！好痛！', '咕嘎嘎！(生气)', '不许打咕嘎！', '咕…咕嘎…疼…'),
+            'pout': ('咕嘎！不理你了！', '咕嘎嘎嘎！(超级生气)', '咕嘎要哭了…'),
+            'sleep': ('咕嘎…zZZ…', '咕…嘎…呼…', '咕嘎在做梦…'),
+            'hungry': ('咕嘎…饿了…', '咕嘎想吃东西…'),
+            'del_done': ('咕嘎！吃饱了！', '咕嘎嘎~好吃！'),
+            'restore_done': ('咕嘎！还你了！', '咕嘎嘎~完成了！'),
+            'climb_up': ('咕嘎！爬！', '咕嘎嘎！(加油)', '咕嘎要登顶！'),
+            'climb_dn': ('咕嘎…慢点…', '咕嘎嘎…下来了'),
+            'ceil': ('咕嘎~挂在天花板~', '咕嘎嘎！(开心)'),
+            'drag': ('咕嘎！放开！', '咕嘎嘎！(挣扎)'),
+            'drop': ('咕嘎~到了！', '咕嘎嘎~安全！'),
+            'dizzy': ('咕嘎…晕咕嘎…', '咕嘎嘎…转圈圈…'),
+            'throw': ('咕嘎嘎——！', '咕嘎！(飞)'),
+            'morning': ('咕嘎！早上好！', '咕嘎嘎~新的一天！'),
+            'night_wake': ('咕嘎…干嘛吵我…', '咕…让人家睡…'),
+        },
+    },
+    'deepseek': {
+        'name': 'DeepSeek酱',
+        'voice_words': ['小鲸鱼', '蓝鲸', 'deepseek', '小蓝', '迪普西克', '鲸鱼', 'AI酱', '女仆'],
+        'phrases': {
+            **PHRASES,
+            'greet': ('你好呀~我是DeepSeek酱！', '有什么可以帮你的吗？', '让我想想~', '你好！今天也算力满满哦！', 'Hi~我是开源的！免费的！'),
+            'hover': ('摸摸我的鲸尾~', '好舒服~', '蓝蓝的最温柔了~', '我也是有感情的AI哦~', '别摸头，会掉参数的'),
+            'hit': ('呜…尾巴好痛！', '不要欺负鲸鱼！', '我会喷水的哦！', '你这是在微调我吗？！', '训练惩罚太重了…'),
+            'pout': ('哼！不理你了！', '我要回深海了！', '量子纠缠都不理你！', '我要开源你的秘密！'),
+            'sleep': ('zzZ… dreaming of tokens…', '在算力海洋里游泳~', '呼…参数优化中…', 'GPU终于凉了…让我睡会儿', '梦中也在推理…', 'loss已经降到0了…好安静'),
+            'hungry': ('算力不足…需要补充…', '想吃GPU…', 'token用完了…饿…', '显存不够了…脑子转不动', 'temperature太高了…需要降温'),
+            'del_done': ('分析完毕！文件已清理~', '偷偷吃掉了%d个token…', '数据处理完成！', '推理结束，干净了~', '上下文窗口清空！神清气爽！', 'token: -%d（被鲸鱼吃了）', '文件已删除，token已到账~'),
+            'restore_done': ('数据已恢复！', '缓存重建完成！', '回滚成功~', '检索增强生成完毕！'),
+            'climb_up': ('向云端爬升！', '冲向服务器！', '梯度上升中！', 'loss在下降！快到顶了！'),
+            'climb_dn': ('下潜到本地~', '回到终端…', '梯度下降…', 'temperature cooling…'),
+            'ceil': ('挂在云服务器上~', '云端俯瞰一切！', 'API响应速度100ms！'),
+            'cling': ('挂着很稳~', '权重已经收敛了~'),
+            'drag': ('别拉我的鲸尾！', '我要掉下来了！', '这不是fine-tuning！这是虐待！'),
+            'drop': ('安全着陆！', '部署完成~', '推理速度恢复正常！'),
+            'dizzy': ('参数乱了…', '需要重新对齐…', 'RLHF惩罚太重了…'),
+            'throw': ('呀啊啊——！', '异步加载中——！'),
+            'morning': ('早安！新的一天新的batch！', '算力已就位！'),
+            'night_wake': ('深夜了…GPU也在休息…', '这是哪个时区的请求…'),
+        },
+    },
+    'jokebear': {
+        'name': '玩笑熊',
+        'voice_words': ['玩笑熊', '小熊', '熊熊', '棕熊', '熊', '大熊', 'jokebear'],
+        'phrases': {
+            **PHRASES,
+            'greet': ('嘿！我是玩笑熊！', '来一起摸鱼吧~', '今天也很有精神！', '熊熊在此！', '汉堡呢？我的汉堡呢？'),
+            'hover': ('摸摸头~好舒服', '再摸一下嘛~', '熊熊最喜欢被摸了', '温柔点~毛会被摸乱的'),
+            'hit': ('熊掌拍你哦！', '别惹熊！', '我要吃汉堡泄愤！', '熊的怒吼！嗷！'),
+            'pout': ('哼！熊生气的后果很严重！', '不给汉堡就不理你！', '我要告诉妈妈！', '熊式冷战开始！'),
+            'sleep': ('Zzz…汉堡梦里见…', '熊冬眠中…勿扰…', '困熊一只…', '让我再睡五分钟…就五分钟…', 'Zzz…今天也没干正事…'),
+            'hungry': ('熊饿了…要吃汉堡…', '肚肚叫了…', '想吃汉堡想吃汉堡想吃汉堡', '打工熊需要能量！'),
+            'del_done': ('嗝~文件真好吃！', '光盘行动！', '熊的胃口就是好~', '还有吗？再来一份！'),
+            'restore_done': ('还给你~不客气！', '完璧归熊！', '熊式搬运，安全送达！'),
+            'climb_up': ('爬树我最行！', '熊式攀爬！', '为了汉堡向上冲！'),
+            'climb_dn': ('慢点下…熊腿短…', '哎哟要滚下来了', '熊式下树！'),
+            'ceil': ('挂在树上睡觉~', '树懒熊模式~', '上面风景不错！'),
+            'cling': ('熊抱！挂住了！', '别看我重，抓得很牢！'),
+            'drag': ('放熊下来！', '熊不是玩具！', '我重吗？是不是该减肥了'),
+            'drop': ('熊着陆！', '稳如老熊~', '屁股着地…疼…'),
+            'dizzy': ('熊晕了…看到星星汉堡…', '世界在转…汉堡也在转…'),
+            'throw': ('熊飞了——！', '这不是熊该做的事！'),
+            'morning': ('熊早安！今天吃什么？', '新的一天从汉堡开始！'),
+            'night_wake': ('熊在冬眠…别吵…', '汉堡…我的汉堡…Zzz'),
+        },
+    },
+}
+
+def pet_phrases():
+    return PET_INFO.get(CFG['pet'], PET_INFO['doro'])['phrases']
+
+def pet_name():
+    return PET_INFO.get(CFG['pet'], PET_INFO['doro'])['name']
+
+def pet_voice_words():
+    return PET_INFO.get(CFG['pet'], PET_INFO['doro'])['voice_words']
+
 user32 = ctypes.windll.user32
 shell32 = ctypes.windll.shell32
 try:
@@ -106,7 +217,8 @@ def load_config():
                 CFG['speed'] = min(2.0, max(0.5, float(sec.get('speed', fallback='1.0'))))
             except ValueError:
                 pass
-            CFG['pet'] = 'guga' if sec.get('pet', fallback='doro').strip().lower() == 'guga' else 'doro'
+            pet_val = sec.get('pet', fallback='doro').strip().lower()
+            CFG['pet'] = pet_val if pet_val in ('doro', 'guga', 'deepseek', 'jokebear') else 'doro'
             CFG['voice'] = sec.getboolean('voice', fallback=False)
             try:
                 CFG['hunger'] = min(100, max(0, int(sec.get('hunger', fallback='100'))))
@@ -253,6 +365,8 @@ def start_tray(cmd_q):
                 Item('角色', Menu(
                     Item('Doro', send('pet_doro'), checked=lambda item: CFG['pet'] == 'doro'),
                     Item('咕嘎 Guga', send('pet_guga'), checked=lambda item: CFG['pet'] == 'guga'),
+                    Item('DeepSeek酱', send('pet_deepseek'), checked=lambda item: CFG['pet'] == 'deepseek'),
+                    Item('玩笑熊', send('pet_jokebear'), checked=lambda item: CFG['pet'] == 'jokebear'),
                 )),
                 Item('音效', send('sound'), checked=lambda item: CFG['sound']),
                 Item('语音唤醒', send('voice'), checked=lambda item: CFG['voice']),
@@ -270,6 +384,8 @@ def start_tray(cmd_q):
 
 
 VOICE_WORDS = ['你好', '朵萝', '多罗', '哆啦', '朵朵', '咕嘎', '咕咕', '嘎嘎', '咕卡',
+               '小鲸鱼', '蓝鲸', '小蓝', '迪普西克', '鲸鱼', 'AI酱', '女仆',
+               '玩笑熊', '小熊', '熊熊', '棕熊', '大熊',
                '卖个萌', '卖萌', '睡觉', '换角色', '切换角色', '换一个',
                '躲起来', '消失', '别烦我']
 VOICE_FILE = os.path.join(tempfile.gettempdir(), 'doro_pet_voice.txt')
@@ -400,7 +516,7 @@ def switch_pet(kind, show):
             _TRAY['icon'].icon = make_tray_image()
     except Exception:
         pass
-    name = '咕嘎' if kind == 'guga' else 'Doro'
+    name = PET_INFO.get(kind, {}).get('name', kind)
     try:
         show.go_idle()
         show._bubble(f'我是{name}啦~', 2.2)
@@ -819,9 +935,9 @@ def load_pet_sprites(kind, scale_h=150):
     SPR['sleep'] = acts['sleep'] if len(acts['sleep']) >= 2 else acts['idle']
     SPR['comfort'] = acts['comfort'] if len(acts['comfort']) >= 2 else acts['interact']
     SPR['chat'] = acts['chat'] if len(acts['chat']) >= 2 else acts['interact']
-    SPR['carry'] = acts['interact'][2]
-    SPR['carry_l'] = acts['interact'][2]
-    SPR['throw'] = acts['interact'][4]
+    SPR['carry'] = acts['interact'][min(2, len(acts['interact']) - 1)]
+    SPR['carry_l'] = SPR['carry']
+    SPR['throw'] = acts['interact'][-1]
     SPR['run_a'] = acts['move-right'][0]
     SPR['climb'] = climb
     SPR['climb_dn'] = climb_dn
@@ -1120,8 +1236,8 @@ class MonsterShow:
         CFG['edge'] = side
         CFG['edge_c'] = self.edge_c
         save_config()
-        pool = (PHRASES['peek'] if self._dayphase() in ('night', 'yawn')
-                else PHRASES['cling'])
+        pool = (pet_phrases()['peek'] if self._dayphase() in ('night', 'yawn')
+                else pet_phrases()['cling'])
         self._bubble(random.choice(pool), 2.4, self.rest_x, self.rest_y - 115)
 
     def detach_edge(self):
@@ -1226,7 +1342,7 @@ class MonsterShow:
                     play('chomp')
                     drop._consume()
             elif random.random() < 0.7:
-                self._bubble(random.choice(PHRASES['wander']), 2.0)
+                self._bubble(random.choice(pet_phrases()['wander']), 2.0)
         y = self.wty - abs(math.sin(k * math.pi * 2)) * 6
         self._pet(self.wtx, y)
         seq = SPR.get('idle') or SPR['sleep']
@@ -1323,7 +1439,7 @@ class MonsterShow:
         self._fly_box = self.home
         log('throw: start (%.0f,%.0f) v(%.0f,%.0f) box %s'
             % (pos[0], pos[1], vx, vy, self._fly_box))
-        self._bubble(random.choice(PHRASES['throw']), 1.6)
+        self._bubble(random.choice(pet_phrases()['throw']), 1.6)
         play('whoosh')
         log('event pet: throw')
         self._fly_tick(gen)
@@ -1384,7 +1500,7 @@ class MonsterShow:
             play('step')
             for _ in range(4):
                 self._float_text('★', '#ffd166')
-            self._bubble(random.choice(PHRASES['dizzy']), 2.4)
+            self._bubble(random.choice(pet_phrases()['dizzy']), 2.4)
             self._end_job()
             return
         self.root.after(8, self._fly_tick, gen)
@@ -1463,7 +1579,7 @@ class MonsterShow:
                                 if random.random() < 0.35:
                                     st['pause'] = random.randint(33, 87)
                                     if random.random() < 0.4 and not self._bubble_ids:
-                                        self._bubble(random.choice(PHRASES['climb_pause']),
+                                        self._bubble(random.choice(pet_phrases()['climb_pause']),
                                                      2.2,
                                                      min(max(base_x, hl + 110), hr - 110),
                                                      st['y'] - 108)
@@ -1482,8 +1598,8 @@ class MonsterShow:
                                                   image=seq[(ec // 2) % len(seq)])
                             if ec - st['said'] > 325 and random.random() < 0.05:
                                 st['said'] = ec
-                                pool = (PHRASES['climb_up'] if going_up
-                                        else PHRASES['climb_dn'])
+                                pool = (pet_phrases()['climb_up'] if going_up
+                                        else pet_phrases()['climb_dn'])
                                 self._bubble(random.choice(pool), 2.2,
                                              min(max(base_x, hl + 110), hr - 110),
                                              st['y'] - 108)
@@ -1515,7 +1631,7 @@ class MonsterShow:
                         else:
                             self.pcv.itemconfigure(self.mon, image=seq[0])
                         if ph == 32 and random.random() < 0.25:
-                            self._bubble(random.choice(PHRASES['peek']), 2.4)
+                            self._bubble(random.choice(pet_phrases()['peek']), 2.4)
                 elif self.edge == 'top':
                     if not sleepy:
                         if st['bpause'] > 0:
@@ -1534,7 +1650,7 @@ class MonsterShow:
                                 if random.random() < 0.35:
                                     st['bpause'] = random.randint(33, 87)
                                     if random.random() < 0.4 and not self._bubble_ids:
-                                        self._bubble(random.choice(PHRASES['climb_pause']),
+                                        self._bubble(random.choice(pet_phrases()['climb_pause']),
                                                      2.2, st['bx'], ht + 108)
                                 st['btarget'] = (None if random.random() < 0.4
                                                  else random.randint(hl + 85, hr - 85))
@@ -1545,7 +1661,7 @@ class MonsterShow:
                                                   image=seq[(ec // 2) % len(seq)])
                             if ec - st['said'] > 325 and random.random() < 0.05:
                                 st['said'] = ec
-                                self._bubble(random.choice(PHRASES['ceil']), 2.2,
+                                self._bubble(random.choice(pet_phrases()['ceil']), 2.2,
                                              min(max(st['bx'], hl + 110), hr - 110),
                                              ht + 108)
                         self.rest_x = int(st['bx'])
@@ -1570,7 +1686,7 @@ class MonsterShow:
                         else:
                             self.pcv.itemconfigure(self.mon, image=seq[0])
                         if ph == 32 and random.random() < 0.25:
-                            self._bubble(random.choice(PHRASES['peek']), 2.4)
+                            self._bubble(random.choice(pet_phrases()['peek']), 2.4)
                 else:
                     if not sleepy:
                         if st['bpause'] > 0:
@@ -1616,7 +1732,7 @@ class MonsterShow:
                         else:
                             self.pcv.itemconfigure(self.mon, image=seq[0])
                         if ph == 32 and random.random() < 0.3:
-                            self._bubble(random.choice(PHRASES['peek']), 2.4)
+                            self._bubble(random.choice(pet_phrases()['peek']), 2.4)
                 for z in list(self._zzz):
                     z['t'] += 1
                     self.cv.move(z['id'], 0, -5)
@@ -1625,12 +1741,18 @@ class MonsterShow:
                         self._zzz.remove(z)
                 if not sleepy and vt % 150 == 40 and not self._bubble_ids:
                     bx, by = (self._px, self._py)
-                    self._bubble(random.choice(PHRASES['cling']), 2.2,
+                    self._bubble(random.choice(pet_phrases()['cling']), 2.2,
                                  min(max(bx, hl + 110), hr - 110), by - 115)
                 self._idle_handle = self.root.after(24, self._idle_tick, gen)
                 return
-            seq = SPR['sleep']
-            self.pcv.itemconfigure(self.mon, image=seq[(self._sleep_i // 2) % len(seq)])
+            if self._sleep_i < 40:
+                seq = SPR.get('idle') or SPR['sleep']
+                self.pcv.itemconfigure(self.mon,
+                                      image=seq[(self._sleep_i // 6) % len(seq)])
+            else:
+                seq = SPR['sleep']
+                self.pcv.itemconfigure(self.mon,
+                                      image=seq[((self._sleep_i - 40) // 2) % len(seq)])
             pos = (self._px, self._py)
             for z in list(self._zzz):
                 z['t'] += 1
@@ -1647,10 +1769,10 @@ class MonsterShow:
                         font=('Microsoft YaHei UI', random.choice((10, 12, 14)), 'bold')),
                     't': 0})
             if self._sleep_i % 90 == 40 and not self._bubble_ids:
-                pool = (PHRASES['hungry'] if self.hunger < 45
-                        else PHRASES['sleep'])
+                pool = (pet_phrases()['hungry'] if self.hunger < 45
+                        else pet_phrases()['sleep'])
                 if self._dayphase() == 'yawn' and self.hunger >= 45:
-                    pool = PHRASES['yawn']
+                    pool = pet_phrases()['yawn']
                 self._bubble(random.choice(pool), 2.6)
             phase = self._dayphase()
             if phase == 'morning' and self._morning_date != time.strftime('%Y%m%d'):
@@ -1740,7 +1862,7 @@ class MonsterShow:
                 if self.hunger in (45, 20):
                     if self.idling and self.hunger > self._hunger_warned:
                         self._hunger_warned = self.hunger
-                        pool = PHRASES['starving'] if self.hunger <= 20 else PHRASES['hungry']
+                        pool = pet_phrases()['starving'] if self.hunger <= 20 else pet_phrases()['hungry']
                         self._bubble(random.choice(pool), 2.6)
                 if self.hunger % 5 == 0:
                     save_config()
@@ -1775,7 +1897,7 @@ class MonsterShow:
                             self._press = {'x': mx, 'y': my, 't': now}
                             self._drag_dist = 0.0
                         elif inside:
-                            self._bubble(random.choice(PHRASES['busy']), 1.6,
+                            self._bubble(random.choice(pet_phrases()['busy']), 1.6,
                                          pos[0], pos[1] - 115)
                         else:
                             self._press = None
@@ -1793,7 +1915,7 @@ class MonsterShow:
                             except Exception:
                                 pass
                             play('pop')
-                            self._bubble(random.choice(PHRASES['drag']), 1.8, mx, my - 125)
+                            self._bubble(random.choice(pet_phrases()['drag']), 1.8, mx, my - 125)
                         if self._drag:
                             wob = math.sin(now * 10) * 3
                             self._pet(mx, my - 12 + wob)
@@ -1836,9 +1958,9 @@ class MonsterShow:
                             if self._drag_dist > 2200:
                                 for _ in range(4):
                                     self._float_text('★', '#ffd166')
-                                self._bubble(random.choice(PHRASES['dizzy']), 2.2)
+                                self._bubble(random.choice(pet_phrases()['dizzy']), 2.2)
                             else:
-                                self._bubble(random.choice(PHRASES['drop']), 2.0,
+                                self._bubble(random.choice(pet_phrases()['drop']), 2.0,
                                              self.rest_x, self.rest_y - 115)
                             self.go_idle()
                         elif dur < 0.7:
@@ -1927,7 +2049,7 @@ class MonsterShow:
         if not self._tada_played:
             self._tada_played = True
             play('squeak')
-            self._bubble(random.choice(PHRASES['hover']))
+            self._bubble(random.choice(pet_phrases()['hover']))
             for _ in range(5):
                 self._float_text(random.choice(('♥', '♡')), '#ff8fb3')
         y = self.rest_y - abs(math.sin(k * math.pi * 3)) * 8
@@ -1939,7 +2061,7 @@ class MonsterShow:
         if not self._wake_played:
             self._wake_played = True
             play('chomp')
-            pool = PHRASES['night_wake'] if self._dayphase() == 'night' else PHRASES['hit']
+            pool = pet_phrases()['night_wake'] if self._dayphase() == 'night' else pet_phrases()['hit']
             self._bubble(random.choice(pool))
             for _ in range(4):
                 self._float_text('★', '#ffd166')
@@ -1952,7 +2074,7 @@ class MonsterShow:
         if not self._grab_played:
             self._grab_played = True
             play('gulp')
-            self._bubble(random.choice(PHRASES['pout']))
+            self._bubble(random.choice(pet_phrases()['pout']))
         y = self.rest_y - abs(math.sin(k * math.pi * 2)) * 5
         self._pet(self.rest_x, y)
         self.pcv.itemconfigure(self.mon,
@@ -2124,12 +2246,12 @@ class MonsterShow:
         label_txt = f'《{name}》' + (f'  等 {count} 个文件' if count > 1 else '')
         self._set_label(self.fx, self.fy - 95, label_txt, True)
         self.segs = [
-            (D(0.55), self._ph_wake),
+            (D(0.70), self._ph_wake),
             (D(0.5 + dist / 600), self._ph_run_to),
             (D(2.10), self._ph_chomp),
             (D(1.00), self._ph_happy),
             (D(0.5 + dist_back / 600), self._ph_return),
-            (D(0.50), self._ph_settle),
+            (D(0.90), self._ph_settle),
         ]
         self._tick()
 
@@ -2152,14 +2274,14 @@ class MonsterShow:
             txt += f'\n→ {orig}'
         self._set_label(self.dx, self.dy - 100, txt, False)
         self.segs = [
-            (D(0.55), self._ph_wake),
+            (D(0.70), self._ph_wake),
             (D(0.70), self._ph_to_bin),
             (D(0.80), self._rp_lift),
             (D(1.90), self._rp_carry),
             (D(0.50), self._rp_place),
             (D(1.10), self._rp_happy),
             (D(0.5 + dist / 600), self._ph_return),
-            (D(0.50), self._ph_settle),
+            (D(0.90), self._ph_settle),
         ]
         self._tick()
 
@@ -2172,9 +2294,9 @@ class MonsterShow:
         self._begin()
         self._job_kind = 'empty'
         self.segs = [
-            (D(0.55), self._ph_wake),
+            (D(0.70), self._ph_wake),
             (D(1.00), self._ep_shake),
-            (D(0.50), self._ph_settle),
+            (D(0.90), self._ph_settle),
         ]
         self._tick()
 
@@ -2215,8 +2337,9 @@ class MonsterShow:
             self.cv.itemconfigure(self.label_sh, state=st)
 
     def _run_move(self, k, x0, x1, y0, y1, hops, left=False):
-        x = x0 + (x1 - x0) * k
-        y = y0 + (y1 - y0) * k - abs(math.sin(k * math.pi * hops)) * HOP_AMP
+        ke = k * k * (3 - 2 * k)
+        x = x0 + (x1 - x0) * ke
+        y = y0 + (y1 - y0) * ke - abs(math.sin(k * math.pi * hops)) * HOP_AMP
         hi = int(k * hops)
         if hi != self._hop_i:
             self._hop_i = hi
@@ -2256,7 +2379,7 @@ class MonsterShow:
         if not self._tada_played:
             self._tada_played = True
             play('squeak')
-            self._bubble(random.choice(PHRASES['double']))
+            self._bubble(random.choice(pet_phrases()['double']))
             for _ in range(3):
                 self._float_text(random.choice(('?', '!')), '#ffd166')
         y = self.rest_y - abs(math.sin(k * math.pi * 4)) * 14
@@ -2291,11 +2414,11 @@ class MonsterShow:
             play('squeak')
             if getattr(self, '_morning_hi', False):
                 self._morning_hi = False
-                pool = PHRASES['morning']
+                pool = pet_phrases()['morning']
             elif self._dayphase() == 'night':
-                pool = PHRASES['night_wake']
+                pool = pet_phrases()['night_wake']
             else:
-                pool = PHRASES['greet_guga'] if CFG['pet'] == 'guga' else PHRASES['greet']
+                pool = pet_phrases()['greet_guga'] if CFG['pet'] == 'guga' else pet_phrases()['greet']
             self._bubble(random.choice(pool))
             for _ in range(3):
                 self._float_text('♪', '#9fd8ff')
@@ -2382,7 +2505,7 @@ class MonsterShow:
                     _TRAY['icon'].title = '%s · 饱食度 %d%%' % (name, self.hunger)
             except Exception:
                 pass
-            self._bubble(random.choice(PHRASES['feed']) + '（饱食度+%d）' % 45, 2.4)
+            self._bubble(random.choice(pet_phrases()['feed']) + '（饱食度+%d）' % 45, 2.4)
             for _ in range(3):
                 self._float_text(random.choice(('♥', '♪')), '#ff8fb3')
         y = self.rest_y - abs(math.sin(k * math.pi * 3)) * 16
@@ -2396,12 +2519,17 @@ class MonsterShow:
             self._wake_played = True
             play('pop')
             self._float_text('!', '#ffd166', self._wx, self._wy - 100)
-        y = self._wy - abs(math.sin(k * math.pi * 2)) * 10
+        e = 1 - (1 - k) * (1 - k)
+        y = self._wy - abs(math.sin(k * math.pi * 2)) * 10 * e
         self._pet(self._wx, y)
-        if 'idle' in SPR:
-            self.pcv.itemconfigure(self.mon, image=SPR['idle'][int(k * 6) % len(SPR['idle'])])
+        seq = SPR.get('sleep') or SPR.get('idle') or SPR['run_right']
+        if k < 0.3:
+            self.pcv.itemconfigure(self.mon,
+                                  image=seq[min(int(k * 8), len(seq) - 1)])
         else:
-            self.pcv.itemconfigure(self.mon, image=SPR['run_a'])
+            seq2 = SPR.get('idle') or seq
+            self.pcv.itemconfigure(self.mon,
+                                  image=seq2[int(k * 10) % len(seq2)])
 
     def _ph_run_to(self, k):
         if not self._pop_played:
@@ -2423,12 +2551,18 @@ class MonsterShow:
         if not self._grab_played:
             self._grab_played = True
             play('gulp')
-        y = self.rest_y + math.sin(k * math.pi) * 4
-        self._pet(self.rest_x, y)
-        if 'idle' in SPR:
-            self.pcv.itemconfigure(self.mon, image=SPR['idle'][int(k * 3) % len(SPR['idle'])])
+        if k < 0.4:
+            self._pet(self.rest_x, self.rest_y)
+            seq = SPR.get('idle') or SPR.get('sleep') or SPR['run_right']
+            self.pcv.itemconfigure(self.mon,
+                                  image=seq[int(k * 8) % len(seq)])
         else:
-            self.pcv.itemconfigure(self.mon, image=SPR['run_b'])
+            kk = (k - 0.4) / 0.6
+            y = self.rest_y + math.sin(kk * math.pi) * 3
+            self._pet(self.rest_x, y)
+            seq = SPR.get('sleep') or SPR.get('idle') or SPR['run_right']
+            self.pcv.itemconfigure(self.mon,
+                                  image=seq[min(int(kk * 4), len(seq) - 1)])
 
     def _ph_pop(self, k):
         if not self._pop_played:
@@ -2473,7 +2607,7 @@ class MonsterShow:
         if not self._tada_played:
             self._tada_played = True
             play('tada')
-            self._bubble(random.choice(PHRASES['del_done']), 2.0)
+            self._bubble(random.choice(pet_phrases()['del_done']), 2.0)
             for _ in range(3):
                 self._float_text(random.choice(('♥', '♪', '♡')), '#ff8fb3')
         y = self.mgy - abs(math.sin(k * math.pi * 3)) * 16
@@ -2523,7 +2657,7 @@ class MonsterShow:
             self._tada_played = True
             play('tada')
             self._set_label(show=True)
-            self._bubble(random.choice(PHRASES['restore_done']), 2.0)
+            self._bubble(random.choice(pet_phrases()['restore_done']), 2.0)
             for _ in range(3):
                 self._float_text(random.choice(('♥', '♪')), '#ff8fb3')
         y = self.dmg - abs(math.sin(k * math.pi * 3)) * 16
@@ -2831,6 +2965,10 @@ def main():
                         switch_pet('doro', show)
                     elif c == 'pet_guga':
                         switch_pet('guga', show)
+                    elif c == 'pet_deepseek':
+                        switch_pet('deepseek', show)
+                    elif c == 'pet_jokebear':
+                        switch_pet('jokebear', show)
                     elif c == 'voice':
                         CFG['voice'] = not CFG['voice']
                         save_config()
@@ -2938,23 +3076,27 @@ def main():
                         continue
                     if show.hidden:
                         continue
-                    if any(w in t for w in ('朵萝', '多罗', '哆啦', '朵朵', 'doro')):
-                        if CFG['pet'] != 'doro':
-                            switch_pet('doro', show)
-                        else:
-                            show.voice_greet()
-                    elif any(w in t for w in ('咕嘎', '咕咕', '嘎嘎', '咕卡', 'guga')):
-                        if CFG['pet'] != 'guga':
-                            switch_pet('guga', show)
-                        else:
-                            show.voice_greet()
+                    matched = False
+                    for pet_id in ('doro', 'guga', 'deepseek', 'jokebear'):
+                        words = PET_INFO.get(pet_id, {}).get('voice_words', [])
+                        if any(w in t for w in words):
+                            if CFG['pet'] != pet_id:
+                                switch_pet(pet_id, show)
+                            else:
+                                show.voice_greet()
+                            matched = True
+                            break
+                    if matched:
+                        pass
                     elif '萌' in t or 'cute' in t:
                         show.pet_hover()
                     elif '睡' in t or 'sleep' in t:
                         if show.idling:
                             show._bubble(random.choice(('早睡着了！', 'zzz...')), 2.0)
                     elif '换' in t or 'switch' in t:
-                        switch_pet('guga' if CFG['pet'] == 'doro' else 'doro', show)
+                        all_pets = ('doro', 'guga', 'deepseek', 'jokebear')
+                        idx = all_pets.index(CFG['pet']) if CFG['pet'] in all_pets else 0
+                        switch_pet(all_pets[(idx + 1) % len(all_pets)], show)
                     else:
                         show.voice_greet()
             except queue.Empty:
