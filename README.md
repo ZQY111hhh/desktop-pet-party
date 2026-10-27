@@ -6,20 +6,26 @@
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6)
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB)
 
-## v2.0 更新
+## 版本说明
 
-- 新增 2 个角色：**DeepSeek酱**（AI 梗台词：算力不足、偷吃 token）和**玩笑熊**（吃货台词：汉堡！汉堡！）
+| 版本 | 内容 |
+|---|---|
+| **v2.0（当前）** | 4 角色、专属台词、语音按钮、食物掉落、动作优化、独立窗口架构 |
+| v1.0 | 2 角色（Doro/Guga）、基础桌宠功能、语音唤醒、爬墙躲猫猫 |
+
+### v2.0 更新详情
+- 新增 **DeepSeek酱**（AI 梗：算力不足、偷吃 token、temperature 太高）和**玩笑熊**（吃货梗：想吃汉堡想吃汉堡想吃汉堡）
 - 每个角色 **18 种场景 × 5~7 条专属台词**（说话风格完全不同）
-- 动作连贯性优化：smoothstep 加减速、入睡/醒来过渡动画、空闲转睡眠缓冲
-- 天降食物系统：12 种 Twemoji 彩色图标（橙子/苹果/汉堡/披萨等），带弹跳+滚动物理
-- 独立窗口架构：每只宠物一个小窗口（Shimeji 同款），互不遮挡，支持未来多宠同屏
-- 语音按钮：固定在屏幕右下角，点一下说话再点一下取消（不再需要键盘按键）
-- 精灵边缘抗锯齿：预乘 alpha 缩放，消除色键透明窗口的黑边问题
+- 动作连贯性：smoothstep 加减速、入睡/醒来过渡、空闲转睡眠缓冲
+- 天降食物：12 种 Twemoji 彩色图标，带弹跳+滚动物理
+- 独立窗口架构：每只宠物一个小窗口（Shimeji 同款），互不遮挡
+- 语音按钮：固定右下角，点击说话/再点取消（不再用键盘按键）
+- 精灵边缘抗锯齿：预乘 alpha 缩放，消除色键透明窗口黑边
 
 ## 功能一览
 
 ### 回收站联动
-- **删除文件** → 小怪兽惊醒，跑到你删除时所在的窗口，坐在文件旁边一口口吃掉，然后走回去睡觉
+- **删除文件** → 宠物惊醒，跑到你删除时所在的窗口，坐在文件旁边一口口吃掉，然后走回去睡觉
 - **还原文件** → 它从屏幕角落把文件搬出来，送到你当前看的窗口，标注原位置
 - **清空回收站** → 它吓得一抖，"呼~"的一下全没了
 
@@ -42,11 +48,10 @@
   - 玩笑熊：喊"玩笑熊" / "小熊"
 - 喊"换角色"按顺序轮换
 - 喊"卖个萌"、"睡觉"、"躲起来"触发对应反应
-- 每个角色的台词风格完全不同（DeepSeek 说 AI 梗，玩笑熊说汉堡梗）
 
 ### 其他玩法
 - **甩飞** → 抓住快速甩出，抛物线飞行+弹跳+头晕
-- **天降食物** → 每 1~5 分钟随机掉落橙子/苹果/汉堡/披萨等 12 种食物（Twemoji 彩色图标）
+- **天降食物** → 每 1~5 分钟掉落橙子/苹果/汉堡/披萨等 12 种食物，宠物跑过去吃掉
 - **自由漫游** → 白天偶尔自己出门溜达、跳上你的窗口顶散步
 - **老板键** → 托盘"显示/隐藏宠物"一键消失/恢复
 
@@ -54,19 +59,19 @@
 
 ### 方式一：下载可执行文件（推荐）
 
-> **点击右侧 [Releases](https://github.com/ZQY111hhh/doro-guga-desktop-pet/releases) → 下载 `DoroPet_v1.0.zip` → 解压 → 双击 exe 即可运行**
+> **点击右侧 [Releases](https://github.com/ZQY111hhh/desktop-pet-party/releases) → 下载 `DoroPet_v2.0.zip` → 解压 → 双击 `FileMonster.exe`**
 
-> 注意：不要点绿色的 "Code" 按钮下载，那只有源代码没有可执行文件
+> 注意：不要点绿色 "Code" 按钮下载，那只有源代码没有可执行文件
 
 > 需要 Windows 10+，语音功能需安装中文语言包
 
 ### 方式二：从源码运行
 
 ```bash
-git clone https://github.com/你的用户名/FileMonster.git
-cd FileMonster
+git clone https://github.com/ZQY111hhh/desktop-pet-party.git
+cd desktop-pet-party
 pip install pillow pystray winsdk
-python file_monster.py
+python doro_pet.py
 ```
 
 ### 打包为 exe
@@ -78,7 +83,7 @@ pyinstaller --onedir --windowed --name FileMonster ^
     --hidden-import=pystray._win32 ^
     --collect-all winsdk ^
     --contents-directory _internal ^
-    file_monster.py
+    doro_pet.py
 ```
 
 ## 使用说明
@@ -92,7 +97,7 @@ pyinstaller --onedir --windowed --name FileMonster ^
 | 快速甩出 | 抛物线飞行+弹跳 |
 | 拖到屏幕边缘 | 吸附爬墙（白天）/ 躲猫猫（夜晚） |
 | 点麦克风按钮 | 开始/停止语音识别 |
-| 托盘右键 | 喂食、爬墙、演示、角色切换、退出等 |
+| 托盘右键 | 喂食、爬墙、换角色、退出等 |
 
 ## 配置
 
@@ -102,7 +107,7 @@ pyinstaller --onedir --windowed --name FileMonster ^
 [monster]
 sound = on          ; 音效开关
 speed = 1.0         ; 动画速度 (0.5~2.0)
-pet = doro          ; 默认角色 (doro / guga)
+pet = doro          ; 默认角色 (doro / guga / deepseek / jokebear)
 voice = on          ; 语音按钮开关
 hunger = 100        ; 饱食度
 edge = none         ; 吸附边缘 (left/right/bottom/top/none)
@@ -111,32 +116,35 @@ edge = none         ; 吸附边缘 (left/right/bottom/top/none)
 ## 项目结构
 
 ```
-FileMonster/
+desktop-pet-party/
 ├── FileMonster.exe      # 主程序（PyInstaller 打包）
-├── file_monster.py      # 源代码（~2900 行，纯标准库+Pillow）
+├── doro_pet.py          # 源代码（~3100 行，Python 标准库 + Pillow）
 ├── _internal/           # PyInstaller 运行时依赖
 ├── assets/
-│   ├── doro/            # Doro 精灵帧（走/跑/吃/睡/爬墙等）
-│   ├── guga/            # Guga 精灵帧
-│   ├── foods/           # 掉落食物图标（Twemoji）
+│   ├── doro/            # Doro 精灵（idle/走/跑/吃/睡/爬墙等）
+│   ├── guga/            # Guga 精灵
+│   ├── deepseek/        # DeepSeek酱 精灵
+│   ├── jokebear/        # 玩笑熊 精灵
+│   ├── foods/           # 掉落食物图标（Twemoji 12种）
 │   ├── doro_face.png    # 托盘头像
 │   └── doro.ico         # 程序图标
 ├── config.ini           # 用户配置
-└── 使用说明.txt          # 中文说明
+└── LICENSE              # MIT 协议
 ```
 
 ## 技术栈
 
 - **Python 3.11** + tkinter（GUI）
-- **Pillow**（精灵加载、alpha 处理、旋转翻转）
+- **Pillow**（精灵加载、alpha 预乘缩放、旋转翻转）
 - **pystray**（系统托盘）
-- **winsdk**（WinRT 语音识别）
-- **ctypes**（Windows API：窗口管理、回收站监控、鼠标轮询）
+- **winsdk**（WinRT 语音识别，按需一次性识别）
+- **ctypes**（Windows API：独立窗口、回收站监控、全局鼠标轮询、SetWindowPos）
 - **PyInstaller**（打包分发）
 
 ## 素材来源
 
 - Doro & Guga 精灵：[hxsworrk-lab/doro-guga-desktop](https://github.com/hxsworrk-lab/doro-guga-desktop)
+- DeepSeek酱 & 玩笑熊：[petdex](https://petdex.dev)（桌面宠物画廊）
 - 食物图标：[Twemoji](https://github.com/twitter/twemoji)（CC-BY 4.0）
 - 音效：程序合成（纯 Python 波形生成）
 
